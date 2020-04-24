@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+    <head>
+        <title>To Do List</title>
+        <meta name="viewport" content="width=device-width, initial-scale =1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+
+
+        <div id="nav-bar" data-nav-bar>
+            <h2 id="nav-heading">TASK LIST</h2>
+            <button id="nav-projects" data-nav-projects>PROJECTS</button>
+        </div>
+
+        <ul id="projects-list" data-projects>
+                <li id="nav-add-project" data-nav-add-project>Add New Project</li>
+        </ul>
+
+        <div id="white-space"></div>
+        <div id="projects-container"></div>
+        
+
+
+
+
+
+
+
+
+
+        <div id="main">
+            <div id="project-title">
+                    <h2 class="project-title" data-project-title></h2>
+            </div>
+            
+
+            
+            <div id="task-body">
+                <div class="tasks" data-tasks-container></div>
+                <div class="task-list" data-project-display-container>
+                    <div class="task-header">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="task-btn-container">
+            <button id="add-task-btn" data-add-task-button>+ ADD TASK</button>
+        </div>
+       
+
+        <div id="start-heading-container">
+            <h1 id="start-heading" data-start-heading>Let's get started - go ahead and create a new project.</h1>
+        </div>
+        <div id="add-project-btn-container" data-project-button-container>
+            <button id="add-project-btn" data-add-project-button>CREATE A NEW PROJECT</button>
+        </div>
+
+        <div id="delete-btns-container" data-delete-btns-container>
+            <button class="delete-btn" data-clear-complete-tasks-button>Clear tasks</button>
+            <button class="delete-btn" data-delete-project-button>Delete project</button>
+        </div>
+       
+
+
+
+
+
+
+
+
+
+
+        <div id="project-bg-modal" data-project-bg-modal> 
+                <div id="project-modal-content">
+                    <div id="close-project" data-close-project-btn>+</div>
+
+                    <form action="" data-new-project-form>
+                        <h2 class="modal-element">Project Title</h2>
+                        <input 
+                            data-new-project-input 
+                            type="text" 
+                            class="modal-element form-input" 
+                            placeholder="e.g. &#34;Learn Guitar&#34;"
+                        />
+                        <button type="submit" id="project-submit-button" class="modal-element">Add Project</button>
+                    </form>
+
+                </div>
+            </div>
+
+            <div id="task-bg-modal" data-task-bg-modal>
+                    <div id="task-modal-content">
+                        <div id="close-task" data-close-task-btn>+</div>
+                        <div class="new-task-creator">
+
+                            <form action="" data-new-task-form>
+                                <h2 class="modal-element">Task Name</h2>
+                                <input
+                                    type="text"
+                                    data-new-task-input
+                                    class="modal-element form-input"
+                                    placeholder="e.g. &#34;Practice the G Major scale&#34;"
+                                />
+                                <button class="btn-create">Add Task</button>
+                            </form>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+
+
+
+
+
+        <template id="task-template">
+            <div class="task">
+                <input type="checkbox" />
+                <label>
+                    <span class="custom-checkbox"></span>
+                </label>
+            </div>
+        </template>
+        <script src="main.js"></script>
+    </body>
+</html>
+
+<!-- 
+                    <h2 class="modal-element">Task</h2>
+                    <input data-task-title type="text" id="modal-input" class="modal-element" placeholder="Title">
+                    <h2 class="modal-element">Deadline</h2>
+                    <input data-task-deadline type="text" id="modal-input" class="modal-element" placeholder="mm/dd/yyyy">
+                    <h2  class="modal-element">Priority</h2>
+                    <select id="new-task-priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select><br>
+                -->

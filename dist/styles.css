@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: white;
+}
+
+::placeholder {
+    color: lightgray;
+}
+
+#nav-bar {
+    margin: auto;
+    border: none;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    color: rgb(227, 226, 202);
+    background-color: white;
+    box-shadow: 0px 0px 7px 4px rgba(201,201,201,1);
+}
+
+#nav-heading {
+    position: absolute;
+    top: 25%;
+    margin-left: 2.5rem;
+}
+
+#nav-projects {
+    margin-left: 79%;
+    width: 150px;
+    font-size: 10pt;
+    letter-spacing: 0.2rem;
+    color: gray;
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+#nav-projects:hover {
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+#projects-list {
+    padding-top: 50px;
+    background-color: white;
+    border: solid 0.03rem gray;
+    min-height: 150px;
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+}
+
+.project-name {
+    color: gray;
+    bottom: 0;
+    font-size: 12pt;
+    padding: 0.5rem;
+    width: 200px;
+    text-align: center;
+    margin-left: 76.5%;
+}
+
+.project-name:hover {
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+#nav-add-project {
+    color: gray;
+    bottom: 0;
+    font-size: 12pt;
+    letter-spacing: 0.05rem;
+    width: 200px;
+    padding: 0.5rem;
+    text-align: center;
+    margin-left: 76.5%;
+}
+
+#nav-add-project:hover {
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+#task-bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#task-modal-content {
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    z-index: 9999; 
+}
+
+#project-bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+}
+
+#project-modal-content {
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    z-index: 9999; 
+}
+
+.btn-create {
+    color: white;
+    background-color: rgb(227, 226, 202);
+    padding: 0.45rem 0.8rem;
+    border: solid rgb(227, 226, 202);
+    border-radius: 4px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+.btn-create:hover {
+    background-color: rgb(230, 230, 205);
+    cursor: pointer;
+}
+
+input {
+    height: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    border: solid lightgray;
+    border-width: .05rem;
+    border-radius: 4px;
+    color: rgb(49, 55, 58);
+    height: 38px;
+    padding-left: 10px;
+}
+
+.form-input {
+    width: 590px;
+}
+
+input:hover {
+    border-color: rgb(155, 155, 155);
+}
+
+.modal-element {
+    color: gray;
+    margin: 10px 0;
+    font-size: 12pt;
+}
+
+#modal-heading {
+    margin-bottom: 25px;
+}
+
+
+#project-submit-button {
+    color: white;
+    background-color: rgb(227, 226, 202);
+    padding: 0.45rem 0.8rem;
+    border: solid rgb(227, 226, 202);
+    border-radius: 4px;
+    border-width: 0.05rem;
+    outline: none;
+}
+
+#project-submit-button:hover {
+    background-color: rgb(230, 230, 205);
+    cursor: pointer;
+}
+
+#close-task {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+}
+
+#close-task:hover {
+    cursor: pointer;
+}
+
+#close-project {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+}
+
+#close-project:hover {
+    cursor: pointer;
+}
+
+#white-space {
+    width: 100%;
+    height: 80px;
+}
+
+.project-name {
+    color: black;
+    position: relative;
+}
+
+#projects-container {
+    background-color: orange;
+}
+
+#projects-heading {
+    height: 100%;
+    width: 350px;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+#add-project-btn-container {
+    display: block;
+    text-align: center;
+}
+
+#add-project-btn {
+    color: white;
+    font-size: 12pt;
+    letter-spacing: 0.05rem;
+    background-color: rgb(227, 226, 202);
+    padding: 1.7rem 1.7rem;
+    border: solid rgb(227, 226, 202);
+    border-radius: 45px;
+    border-width: 0.05rem;
+    box-shadow: 0px 0px 7px 4px rgba(201,201,201,1);
+    outline: none;
+    display: inline-block;
+}
+
+#add-project-btn:hover {
+    background-color: rgb(230, 230, 205);
+    box-shadow: 0px 0px 7px 4px rgb(208, 208, 208);
+    cursor: pointer;
+}
+
+#start-heading-container {
+    text-align: center;
+}
+
+#start-heading {
+    color: gray;
+    font-size: 3.3rem;
+    font-weight: lighter;
+    display: inline-block;
+    margin-top: 42px;
+    margin-bottom: 50px;
+    width: 800px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#project-title {
+    text-align: center;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: gray;
+    font-weight: lighter;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+#task-body {
+    color: gray;
+    font-size: 1.5rem;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.task {
+    font-size: 1.2rem;
+    border-bottom: solid lightgray 0.08rem;
+    width: 500px;
+    padding: 10px;
+    position: relative;
+}
+
+.task label {
+    display: inline-flex;
+    font-weight: lighter;
+    color: rgb(152, 152, 152);
+    align-items: center;
+    position: relative;
+}
+
+.tasks label:hover {
+    cursor: pointer;
+}
+
+.task label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    left: 0.03em;
+    top: 50%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+    transform: scaleX(1);
+}
+.task input {
+    display: inline-block;
+    height: 5px;
+    margin-right: 5px;
+}
+
+#task-btn-container {
+    text-align: center;
+}
+
+#add-task-btn {
+    display: inline-block;
+    font-size: 10pt;
+    letter-spacing: 0.05rem;
+    color: rgb(79, 79, 79);
+    background-color: white;
+    padding: 0.45rem 0.8rem;
+    margin-top: 18px;
+    margin-bottom: 40px;
+    border: none;
+    outline: none;
+}
+
+#add-task-btn:hover {
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+#delete-btns-container {
+    text-align: center;
+}
+
+.delete-btn {
+    color: gray;
+    font-weight: lighter;
+    display: inline-block;
+    margin: 10px;
+    border: none;
+    font-size: 12pt;
+}
+
+.delete-btn:hover {
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+[type="checkbox"]:checked + label {
+    opacity: 0.5;
+}
